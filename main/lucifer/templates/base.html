@@ -1,0 +1,32 @@
+<!--templates/base.html-->
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Search</title>
+    <!-- <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/> -->
+</head>
+
+<body>
+    <h1><a href="/">Lucifer</a></h1>
+
+    {% block content %}
+    <form action="{% url 'results' %}" method="post" id="search">{% csrf_token %}
+        <label for="stamina">Stamina:</label>
+        <input type="text" id="stamina" name="stamina"><br><br>
+        <label for="experience">Experience:</label>
+        <input type="text" id="experience" name="experience">
+        <br>
+        <br>
+        <button type="submit" form="search" value="Submit">Submit</button>
+    </form>
+    <br>
+
+    {% endblock %}
+</body>
+
+<footer><em>Copyright © 2021. All right reserved.</em></footer>
+
+</html>
