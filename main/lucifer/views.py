@@ -24,7 +24,6 @@ class BaseView(View):
 
 class ResultsView(View):
     template_name = "results.html"
-    error_template_name = "error.html"
 
     def post(self, request):
         stamina = request.POST.get("stamina")
