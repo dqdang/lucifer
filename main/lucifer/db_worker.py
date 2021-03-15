@@ -1,5 +1,6 @@
 from lucifer import models
 
+
 def find_efficient_dungeons(experience, stamina):
     try:
         experience = int(experience)
@@ -12,5 +13,6 @@ def find_efficient_dungeons(experience, stamina):
         for dungeon in applicable_dungeons:
             if dungeon.experience > experience:
                 efficient_dungeons[dungeon.dungeon_name] = dungeon.experience
-    efficient_dungeons = dict(sorted(efficient_dungeons.items(), key=lambda item: item[1], reverse=True))
+    efficient_dungeons = dict(
+        sorted(efficient_dungeons.items(), key=lambda item: item[1], reverse=True))
     return efficient_dungeons
