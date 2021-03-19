@@ -12,7 +12,7 @@ def index(request):
 
 def update(request):
     db_builder.update()
-    return HttpResponse("Updating database complete")
+    return HttpResponse("Updating database complete.")
 
 
 class BaseView(View):
