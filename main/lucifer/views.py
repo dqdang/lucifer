@@ -7,7 +7,7 @@ import main.settings as settings
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the lucifer index.")
+    return HttpResponse("Hello, world.")
 
 
 def update(request):
